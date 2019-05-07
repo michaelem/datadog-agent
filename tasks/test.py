@@ -78,7 +78,7 @@ def test(ctx, targets=None, coverage=False, build_include=None, build_exclude=No
     lint(ctx, targets=tool_targets)
     lint_licenses(ctx)
     print("--- Vetting:")
-    vet(ctx, targets=tool_targets, six_root=six_root)
+    vet(ctx, targets=tool_targets, six_root=six_root, build_tags=build_tags)
     print("--- Misspelling:")
     misspell(ctx, targets=tool_targets)
     print("--- ineffassigning:")
