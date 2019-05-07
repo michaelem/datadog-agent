@@ -71,6 +71,7 @@ jobs:
       - run:
           name: test six
           command: |
+            pip3 install pyyaml # needed by the tests
             # remove base check before running tests, go on if pip fails
             pip uninstall datadog-checks-base -y || :
             inv six.test
